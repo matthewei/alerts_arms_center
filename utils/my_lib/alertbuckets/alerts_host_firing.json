@@ -1,0 +1,52 @@
+{
+  "receiver": "PrometheusAlert",
+  "status": "firing",
+  "alerts": [
+    {
+      "status": "firing",
+      "labels": {
+        "alertname": "HostDown",
+        "container": "node-exporter",
+        "endpoint": "node-exporter",
+        "instance": "kcs-snmp-s-2ssd9",
+        "job": "cmss-kcs-node-exporter",
+        "namespace": "kube-system",
+        "pod": "cmss-kcs-node-exporter-6542s",
+        "prometheus": "kube-system/cmss-kcs-prometheus",
+        "service": "cmss-kcs-node-exporter",
+        "severity": "critical"
+      },
+      "annotations": {
+        "description": "主机: 【kcs-snmp-s-2ssd9】has been down for more than 1 minute",
+        "title": "Instance down"
+      },
+      "startsAt": "2023-06-15T01:32:03.589Z",
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "http://prometheus-cmss-kcs-prometheus-0:9090/graph?g0.expr=up%7Bjob%3D~%22.%2Anode-exporter%7Cprometheus%7Cgrafana%7Calertmanager%22%7D+%3D%3D+0\u0026g0.tab=1",
+      "fingerprint": "326166389b3b44d5"
+    }
+  ],
+  "groupLabels": {
+    "alertname": "HostDown"
+  },
+  "commonLabels": {
+    "alertname": "HostDown",
+    "container": "node-exporter",
+    "endpoint": "node-exporter",
+    "instance": "kcs-snmp-s-2ssd9",
+    "job": "cmss-kcs-node-exporter",
+    "namespace": "kube-system",
+    "pod": "cmss-kcs-node-exporter-6542s",
+    "prometheus": "kube-system/cmss-kcs-prometheus",
+    "service": "cmss-kcs-node-exporter",
+    "severity": "critical"
+  },
+  "commonAnnotations": {
+    "description": "主机: 【kcs-snmp-s-2ssd9】has been down for more than 1 minute",
+    "title": "Instance down"
+  },
+  "externalURL": "http://cmss-kcs-alertmanager.kube-system:",
+  "version": "4",
+  "groupKey": "{}:{alertname=\"HostDown\"}",
+  "truncatedAlerts": 0
+}

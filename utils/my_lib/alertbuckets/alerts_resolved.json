@@ -1,0 +1,84 @@
+{
+  "receiver": "PrometheusAlert",
+  "status": "resolved",
+  "alerts": [
+    {
+      "status": "resolved",
+      "labels": {
+        "alertname": "CPUThrottlingHigh",
+        "container": "php-apache",
+        "namespace": "default",
+        "pod": "php-apache-7d8fdb687c-7d4jp",
+        "prometheus": "kube-system/cmss-kcs-prometheus",
+        "severity": "1"
+      },
+      "annotations": {
+        "message": "96.75% throttling of CPU in namespace default for container php-apache in pod php-apache-7d8fdb687c-7d4jp.",
+        "runbook_url": "https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-cputhrottlinghigh",
+        "summary": "最近5分钟，超过25%的 CPU 执行周期受到限制的容器"
+      },
+      "startsAt": "2023-06-12T07:57:03.589Z",
+      "endsAt": "2023-06-12T08:13:33.589Z",
+      "generatorURL": "http://prometheus-cmss-kcs-prometheus-0:9090/graph?g0.expr=sum+by+%28container%2C+pod%2C+namespace%29+%28increase%28container_cpu_cfs_throttled_periods_total%7Bcontainer%21%3D%22%22%7D%5B5m%5D%29%29+%2F+sum+by+%28container%2C+pod%2C+namespace%29+%28increase%28container_cpu_cfs_periods_total%5B5m%5D%29%29+%3E+%2825+%2F+100%29\u0026g0.tab=1",
+      "fingerprint": "d624b80b2e4094ca"
+    },
+    {
+      "status": "resolved",
+      "labels": {
+        "alertname": "CPUThrottlingHigh",
+        "container": "php-apache",
+        "namespace": "default",
+        "pod": "php-apache-7d8fdb687c-9bfsp",
+        "prometheus": "kube-system/cmss-kcs-prometheus",
+        "severity": "critical"
+      },
+      "annotations": {
+        "message": "92.52% throttling of CPU in namespace default for container php-apache in pod php-apache-7d8fdb687c-9bfsp.",
+        "runbook_url": "https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-cputhrottlinghigh",
+        "summary": "最近5分钟，超过25%的 CPU 执行周期受到限制的容器"
+      },
+      "startsAt": "2023-06-12T08:18:33.589Z",
+      "endsAt": "2023-06-12T08:26:03.589Z",
+      "generatorURL": "http://prometheus-cmss-kcs-prometheus-0:9090/graph?g0.expr=sum+by+%28container%2C+pod%2C+namespace%29+%28increase%28container_cpu_cfs_throttled_periods_total%7Bcontainer%21%3D%22%22%7D%5B5m%5D%29%29+%2F+sum+by+%28container%2C+pod%2C+namespace%29+%28increase%28container_cpu_cfs_periods_total%5B5m%5D%29%29+%3E+%2825+%2F+100%29\u0026g0.tab=1",
+      "fingerprint": "216eb00d9c5e29f9"
+    },
+    {
+      "status": "resolved",
+      "labels": {
+        "alertname": "CPUThrottlingHigh",
+        "container": "php-apache",
+        "namespace": "default",
+        "pod": "php-apache-7d8fdb687c-vwtpp",
+        "prometheus": "kube-system/cmss-kcs-prometheus",
+        "severity": "critical"
+      },
+      "annotations": {
+        "message": "99.49% throttling of CPU in namespace default for container php-apache in pod php-apache-7d8fdb687c-vwtpp.",
+        "runbook_url": "https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-cputhrottlinghigh",
+        "summary": "最近5分钟，超过25%的 CPU 执行周期受到限制的容器"
+      },
+      "startsAt": "2023-06-12T08:13:03.589Z",
+      "endsAt": "2023-06-12T08:21:33.589Z",
+      "generatorURL": "http://prometheus-cmss-kcs-prometheus-0:9090/graph?g0.expr=sum+by+%28container%2C+pod%2C+namespace%29+%28increase%28container_cpu_cfs_throttled_periods_total%7Bcontainer%21%3D%22%22%7D%5B5m%5D%29%29+%2F+sum+by+%28container%2C+pod%2C+namespace%29+%28increase%28container_cpu_cfs_periods_total%5B5m%5D%29%29+%3E+%2825+%2F+100%29\u0026g0.tab=1",
+      "fingerprint": "9bacff832a47ce58"
+    }
+  ],
+  "groupLabels": {
+    "alertname": "CPUThrottlingHigh"
+  },
+  "commonLabels": {
+    "alertname": "CPUThrottlingHigh",
+    "container": "php-apache",
+    "namespace": "default",
+    "prometheus": "kube-system/cmss-kcs-prometheus",
+    "severity": "critical"
+  },
+  "commonAnnotations": {
+    "runbook_url": "https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-cputhrottlinghigh",
+    "summary": "最近5分钟，超过25%的 CPU 执行周期受到限制的容器"
+  },
+  "externalURL": "http://cmss-kcs-alertmanager.kube-system:",
+  "version": "4",
+  "groupKey": "{}:{alertname=\"CPUThrottlingHigh\"}",
+  "truncatedAlerts": 0
+}

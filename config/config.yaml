@@ -1,0 +1,70 @@
+SiteConfig: # 站点配置
+  SiteName: "HN-GZ-****-1"
+  SysModule: "EKI-PLUS"
+GinServerConfig: # Gin 服务配置
+  BaseConfig:
+    LogLevel: "release" #日志级别 debug release test
+    TimeZone: "Asia/Chongqing"
+  HttpConfig:
+    Address: ":30374" # 监听地址, default ":8080"
+    ReadTimeout: 10 # 读取超时时长
+    WriteTimeout: 10 # 写入超时时长
+    MaxHeaderBytes: 20 # 最大的header大小，二进制位长度
+    AllowIps: # 白名单ip列表
+    - "127.0.0.1"
+    - "192.168.1.1"
+ZapLogConfig: # Zap 日志配置
+  LogLevel: "debug" #日志级别 debug  info  warning  error
+  LogFormat: "json" #输出日志格式	logfmt, json
+  LogPath: "" #输出日志文件路径
+  LogFileName: "" #输出日志文件名称
+  LogFileMaxSize: 100 #【日志分割】单个日志文件最多存储量 单位(mb)
+  LogFileMaxBackups: 60 #【日志分割】日志备份文件最多数量
+  LogMaxAge: 30 #日志保留时间，单位: 天 (day)
+  LogCompress: true #是否压缩日志
+  LogStdout: true #是否输出到控制台
+KafkaConfig: # Kafka 配置
+  Enabled: true
+  DebugMode: false
+  Version: "abcd"
+  Brokers: "8.129.66.229:9092"
+  Topic: "cloud_native"
+  RequiredAck: -1 # NoResponse 0;WaitForLocal;WaitForAll -1
+  ReturnSuccesses: true
+  ReturnErrors: true
+  RetryMax: 10
+  MaxMessageBytes: 1000000
+  AsyncProducersPools: 10
+SnmpConfig:
+  SnmpConfig: # SNMP 配置
+    SNMPDestination:
+    - "127.0.0.1:162"
+    SNMPRetries: 1
+    SNMPVersion: "V2c" # V1 V2c V3
+    SNMPTimeout: 5s
+    SNMPCommunity: public
+    SNMPAuthenticationEnabled: false # V3
+    SNMPAuthenticationProtocol: MD5 # V3
+    SNMPAuthenticationUsername: "Username" # V3
+    SNMPAuthenticationPassword: "Password" # V3
+    SNMPPrivateEnabled: false # V3
+    SNMPPrivateProtocol: DES # V3
+    SNMPPrivatePassword: "SECRET" # V3
+    SNMPSecurityEngineID: "SECURITY_ENGINE_ID" # V3
+    SNMPContextEngineID: "CONTEXT_ENGINE_ID" # V3
+    SNMPContextName: "CONTEXT_ENGINE_NAME" # V3
+  TrapOIDsConfig: # Trap OID 配置
+    SnmpTrapOid: "1.3.6.1.4.1.49022.2023.1"
+    SiteNameOid: "1.3.6.1.4.1.49022.2023.2.13"
+    SysModuleOid: "1.3.6.1.4.1.49022.2023.2.12"
+    AlertNameOid: "1.3.6.1.4.1.49022.2023.2.10"
+    AlertStatusOid: "1.3.6.1.4.1.49022.2023.2.3"
+    AlertTypeOid: "1.3.6.1.4.1.49022.2023.2.5"
+    AlertResourceOid: "1.3.6.1.4.1.49022.2023.2.8"
+    AlertHostOid: "1.3.6.1.4.1.49022.2023.2.20"
+    AlertSeverityOid: "1.3.6.1.4.1.49022.2023.2.2"
+    AlertSendTimeOid: "1.3.6.1.4.1.49022.2023.2.4" #告警发生时，该字段填写StartsAt，告警清空时，该字段填写EndsAt
+    AlertSummaryOid: "1.3.6.1.4.1.49022.2023.2.21"
+    AlertDescriptionOid: "1.3.6.1.4.1.49022.2023.2.11"
+    AlertImpactOid: "1.3.6.1.4.1.49022.2023.2.9"
+
